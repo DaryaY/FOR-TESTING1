@@ -1,0 +1,457 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Heebo', sans-serif; font-weight: 300;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;}
+.row p {font-size: 18px;}
+.video-wrap {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* Navbar and Dropdown menu */
+.top {
+  text-align: right;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 50px;
+  background-color: #fbb612;
+  box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+}
+.top a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0px 20px;
+}
+.nav {
+  margin-right: 10px;
+}
+.small-nav {display:none}
+.small-nav, .nav {margin-top: 10px;}
+.dropdown {
+display: inline-block;
+}
+.dropdown .dropbtn {
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: #f8f8f8;
+    background-color: inherit;
+    padding: 2px 7px;
+}
+.dropdown:hover .dropbtn {
+    background-color: #265373;
+}
+.nav a:hover {
+  color: #265373;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight:100;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+footer {
+  text-align: center;
+  font-size: 18px;
+  position: relative;
+}
+.arrow {
+  background-color: #265373;
+  padding: 15px 20px;
+  z-index: 99;
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+.arrow-up {
+  border: solid #d9d9d9;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 15px;
+  position: relative;
+  top: 5px;
+  right: 0px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.arrow-up:hover {
+  border: solid #fbb612;
+  border-width: 0 5px 5px 0;
+}
+.blue {background-color: #265373;color: #d9d9d9; padding: 30px 0px;}
+.white {background-color: #f7f7f7;color: #265373; padding: 30px 0px;}
+.gray {background-color: #e6e6e6;color: #265373; padding: 30px 0px 80px;}
+.whiter {background-color: #f7f7f7; color:#336f99; padding: 10px 20px; margin-top: 40px;}
+.gray h1, .contact h1 {font-weight: bold; font-size: 50px;}
+.gray h2, .gray h1, .contact h1 {text-align: center;}
+.gray h2 {margin: 0px; padding: 10px 0px 5px;}
+.text-video {margin-bottom: -10px;}
+.logo {color: #336f99;}
+.contact p {color: #336f99;}
+/*MODAL-BIG SCREENS*/
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99;
+  margin-top: 50px;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+/*STYLE*/
+.modalDialog > .modal-portrait {display: block; max-width: 800px; width: 50%;height: 100%; margin: 0 auto;}
+.modalDialog > .modal-lands {display: block; max-width: 1920px; width: 80%;height: 100%; margin: 0 auto;}
+.modalDialog > .modal-portrait, .modalDialog > .modal-lands {
+	position: relative;
+	padding: 40px 20px;
+  margin: 0 auto;
+	background: #e6e6e6;
+  overflow:scroll;
+  color: #265373;
+}
+.modal-text {
+  width: 90%;
+  margin: 0 auto;
+}
+.modalDialog p {
+  font-size: 22px;
+  font-size: 1.7vw;
+}
+.modalDialog h1 {
+  font-size: 32px;
+  font-size: 2.4vw;
+  text-align: center;
+}
+.modal-portrait img {
+  display: block;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.modal-lands img {
+  max-width: 1980px;
+  width: 100%;
+}
+.close {
+	background: #265373;
+	color: #FFFFFF;
+	line-height: 30px;
+	position: absolute;
+	text-align: center;
+	padding: 10px;
+  font-size: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	-moz-box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.2);
+  box-shadow: 6px 6px 8px 0px rgba(0,0,0,0.2);
+}
+.close:hover { background: #fbb612; }
+@media only screen and (min-width: 1024px) {
+  /* Create a Parallax Effect */
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .bgimg-1 {
+      background-image: url('logo-background.jpg');
+      background-size: cover;
+      min-height: 100%;
+  }
+  .bgimg-2 {
+      background-image: url('logo-background.jpg');
+      background-size: cover;
+      min-height: 100%;
+  }
+  .bgimg-3 {
+      background-image: url("/w3images/parallax3.jpg");
+      min-height: 400px;
+  }
+  .top img {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    background-color: #336f99;
+    padding: 10px 15px;
+    color: #fcc136;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    width: 250px;
+  }
+  .whiter.portrait {
+    margin-top: 60px;
+  }
+  .logo {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    padding-top: 110px;
+    font-weight: 600;
+  }
+  .bgimg-1 img {display: block; width: 33%; margin: 0 auto;}
+  .bgimg-1 p {
+    position: absolute;
+    font-size: 50px;
+    font-size: 4vw;
+    right: 10%;
+    bottom: 1%;
+    line-height: 1;
+    text-align: right;
+    font-weight: 300;
+  }
+  .white img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+#container {max-width: 90%; margin: 0 auto;}
+  /*COLUMNS*/
+  .column {float: left; padding-left: 1em; padding-right: 1em;}
+  .column.full {width: 100%;}
+  .column.two-thirds {width: 66.7%;}
+  .column.half {width: 50%;}
+  .column.third {width: 33.3%;}
+  .column.fourth {width: 25%;}
+  .column.flow-opposite {float: right;}
+  .column-c {margin: 0 auto; padding-left: 1em; padding-right: 1em;}
+  .column-c.two-thirds {width: 66.7%;}
+  /* row used as a clearfix to clear floats */
+  .row:before, .row:after {content: " ";display: table;}
+  .row:after {clear: both;}
+  .row {*zoom: 1;}
+  .bgimg-2 h1 {color:#fbb612; text-align: center; font-weight: bold; font-size: 70px; margin-bottom: -20px;}
+  .bgimg-2 .left, .bgimg-2 .right{
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .bgimg-2 button {
+    font-style: none;
+    display: inline-block;
+    background-color: #fbb612;
+    color: #f8f8f8;
+    padding: 5px 30px;
+    border: none;
+    font-size: 40px;
+    margin: 0px 20px;
+    margin-top: 30px;
+  }
+  .bgimg-2 button:hover {
+    background-color:#265373;
+    color: #fbb612;
+  }
+  .bgimg-2 .row {
+    position: relative;
+    top: 100px;
+  }
+  .contact .third {position: relative; top: 50px;}
+}
+@media only screen and (max-width: 1024px) {
+    /* Turn off parallax scrolling for tablets and phones */
+    .bgimg-1, .bgimg-2 {
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bgimg-1 {
+        background-image: url('logo-background.jpg');
+        background-size: cover;
+        padding-bottom: 20px;
+    }
+    .bgimg-2 {
+        background-image: url('logo-background.jpg');
+        background-size: cover;
+        padding: 30px 0px 80px;
+    }
+    .logo {width: 50%; margin: 0 auto;}
+    .bgimg-1 img {display: block; max-width:300px; width:100%; margin: 0 auto; padding-top: 100px;}
+    .bgimg-1 p {
+      font-size: 40px;
+      line-height: 1;
+      text-align: center;
+      font-weight: 300;
+    }
+    .nav {display:none;}
+    .small-nav {display:block;}
+    .mobi-nav img{display: inline-block; height: 30px; margin-left: -20px;}
+    .mobi-logo img {
+      position: absolute;
+      top: 17px;
+      left: 0px;
+      background-color: #336f99;
+      padding: 10px 15px;
+      color: #fcc136;
+      box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+      width: 170px;
+    }
+    .whiter{
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    .contact img {
+      display: block;
+      max-width: 500px; width:100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .contact p {text-align: center;}
+    .contact {padding-bottom: 70px;}
+    #container {max-width: 90%; margin: 0 auto;}
+    .bgimg-2 h1 {color:#fbb612; text-align: center; font-weight: bold; font-size: 55px; margin-bottom: -20px;}
+    .bgimg-2 .left, .bgimg-2 .right{
+      display: block;
+      max-width: 500px;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .bgimg-2 button {
+      font-style: none;
+      display: inline-block;
+      background-color: #fbb612;
+      color: #f8f8f8;
+      padding: 5px 20px;
+      border: none;
+      font-size: 20px;
+      font-size: 3vmax;
+      margin: 0px 20px;
+      margin-top: 30px;
+    }
+    .bgimg-2 button:hover {
+      background-color:#265373;
+      color: #fbb612;
+    }
+    .modalDialog > .modal-lands, .modalDialog > .modal-portrait  {
+      width: 100%;
+    	padding: 30px 10px;
+    }
+    .modalDialog p {
+      font-size: 20px;
+    }
+    .modalDialog h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+}
+/*To Keep Text/other at certain Max beyond 1920 screens*/
+@media only screen and (min-width: 1920px) {
+  .bgimg-1 img {display: block; width: 500px; margin: 0 auto;}
+  .bgimg-1 p {
+    position: absolute;
+    font-size: 65px;
+    right: 10%;
+    bottom: 1%;
+    line-height: 1;
+    text-align: right;
+    font-weight: 300;
+  }
+  #container {max-width: 60%; margin: 0 auto;}
+  .modalDialog p {
+    font-size: 25px;
+  }
+  .modalDialog h1 {
+    font-size: 37px;
+    text-align: center;
+  }
+}
+/*MODAL for Navigation on mobiles*/
+.modalDialog > .modal-navi {
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 20px;
+  background: #fbb612;
+  overflow:scroll;
+  position: relative;
+}
+.modal-navtext a, .modal-navtext p {
+  display: inline-block;
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 400;
+  padding-left: 20px;
+}
+.two-search {
+  position: relative;
+  margin-bottom: -25px;
+  margin-top: 10px;
+}
+.modal-navtext ul li a {
+font-size: 18px;
+}
+.modal-navtext ul {
+  margin-left: -30px;
+  margin-top: -25px;
+  list-style: none;
+}
+.mobinav-contact {
+  margin-top: -20px;
+}
+.modal-navtext a:hover {color: #265373;}
+.close2 {
+	background: #FFFFFF;
+	color: #fbb612;
+	line-height: 30px;
+	position: absolute;
+  z-index: 101;
+  right:0px;
+  top: 10px;
+	text-align: center;
+	padding: 10px;
+  font-size: 40px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.close2:hover { background: #336f99; color: #FFFFFF;}
