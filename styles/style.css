@@ -205,6 +205,7 @@ footer {
       background-image: url('logo-background.jpg');
       background-size: cover;
       min-height: 100%;
+      position: relative;
   }
   .bgimg-2 {
       background-image: url('logo-background.jpg');
@@ -230,10 +231,13 @@ footer {
   }
   .logo {
     display: block;
-    vertical-align: middle;
     position: relative;
-    padding-top: 110px;
+    padding-top: 50px;
     font-weight: 600;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .bgimg-1 img {display: block; width: 33%; margin: 0 auto;}
   .bgimg-1 p {
