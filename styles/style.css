@@ -255,7 +255,6 @@ footer {
     margin: 0 auto;
   }
 #container {max-width: 90%; margin: 0 auto;}
-.vertical-center {display: block; width: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
   /*COLUMNS*/
   .column {float: left; padding-left: 1em; padding-right: 1em;}
   .column.full {width: 100%;}
@@ -294,6 +293,8 @@ footer {
     color: #fbb612;
   }
   .contact .third {position: relative; top: 50px;}
+  .vertical-center {display: block; width: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
+  .cont-p {margin-top: 40px;}
 }
 @media only screen and (max-width: 1024px) {
     /* Turn off parallax scrolling for tablets and phones */
@@ -398,7 +399,7 @@ footer {
     font-weight: 300;
   }
   .blue-text h3, .contact p {
-    font-size: 20px;
+    font-size: 22px;
   }
   .blue-text h1 {
     font-size: 42px;
