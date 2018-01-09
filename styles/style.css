@@ -88,6 +88,7 @@ footer {
   text-align: center;
   font-size: 18px;
   position: relative;
+  margin-top: 30px;
 }
 .arrow {
   background-color: #265373;
@@ -384,6 +385,9 @@ footer {
     .modalDialog h1 {
       font-size: 32px;
       text-align: center;
+    }
+    footer {
+        margin-top: 0px;
     }
 }
 /*To Keep Text/other at certain Max beyond 1920 screens*/
