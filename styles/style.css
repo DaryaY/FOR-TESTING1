@@ -211,6 +211,7 @@ footer {
       background-image: url('logo-background.jpg');
       background-size: cover;
       min-height: 100%;
+      position: relative;
   }
   .bgimg-3 {
       background-image: url("/w3images/parallax3.jpg");
@@ -255,6 +256,7 @@ footer {
     margin: 0 auto;
   }
 #container {max-width: 90%; margin: 0 auto;}
+.vertical-center {width: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
   /*COLUMNS*/
   .column {float: left; padding-left: 1em; padding-right: 1em;}
   .column.full {width: 100%;}
@@ -268,7 +270,7 @@ footer {
   /* row used as a clearfix to clear floats */
   .row:before, .row:after {content: " ";display: table;}
   .row:after {clear: both;}
-  .row {*zoom: 1;}
+  .row {*zoom: 1; position:}
   .bgimg-2 h1 {color:#fbb612; text-align: center; font-weight: bold; font-size: 70px; margin-bottom: -20px;}
   .bgimg-2 .left, .bgimg-2 .right{
     display: block;
@@ -291,10 +293,6 @@ footer {
   .bgimg-2 button:hover {
     background-color:#265373;
     color: #fbb612;
-  }
-  .bgimg-2 .row {
-    position: relative;
-    top: 100px;
   }
   .contact .third {position: relative; top: 50px;}
 }
@@ -399,6 +397,12 @@ footer {
     line-height: 1;
     text-align: right;
     font-weight: 300;
+  }
+  .blue-text h3, .contact p {
+    font-size: 22px;
+  }
+  .blue-text h1 {
+    font-size: 42px;
   }
   #container {max-width: 60%; margin: 0 auto;}
   .modalDialog p {
