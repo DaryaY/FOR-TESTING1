@@ -385,7 +385,7 @@ footer {
     }
 }
 /*To Keep Text/other at certain Max beyond 1920 screens*/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1472px) {
   .bgimg-1 img {display: block; width: 500px; margin: 0 auto;}
   .bgimg-1 p {
     position: absolute;
