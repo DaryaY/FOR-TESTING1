@@ -300,10 +300,10 @@ footer {
 @media only screen and (max-width: 1024px) {
     /* Turn off parallax scrolling for tablets and phones */
     .bgimg-1, .bgimg-2 {
-        background-attachment: fixed;
-        background-position: top;
-        background-repeat: no-repeat;
-        background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     .bgimg-1 {
         background-image: url('logo-background.jpg');
