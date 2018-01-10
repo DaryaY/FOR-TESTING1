@@ -299,7 +299,7 @@ footer {
 @media only screen and (max-width: 1024px) {
     /* Turn off parallax scrolling for tablets and phones */
     .bgimg-1, .bgimg-2 {
-      background-attachment: fixed;
+      background-attachment: scroll;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
