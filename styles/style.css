@@ -454,11 +454,11 @@ footer {
   .blue-text h1, .white h1 {
     font-size: 42px;
   }
-  .flexbox-3, .flexbox-4 {
+  .flexbox-1 {
   -webkit-flex: 2;
   padding: 20px;
   }
-  #container {max-width: 1000px; margin: 0 auto;}
+  #container {max-width: 1200px; margin: 0 auto;}
   .modalDialog p {
     font-size: 25px;
   }
