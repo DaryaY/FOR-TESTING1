@@ -78,7 +78,6 @@ footer {
   text-align: center;
   font-size: 18px;
   position: relative;
-  margin-top: 30px;
 }
 .arrow {
   background-color: #265373;
@@ -103,6 +102,8 @@ footer {
 }
 .arrow-up:hover {border: solid #fbb612;border-width: 0 5px 5px 0;}
 .blue {background-color: #265373;color: #d9d9d9; padding: 30px 0px;}
+.blue h3 a {color:#f2f2f2;} .blue h3 a:hover {color: #fbb612;}
+.white h3 a {color:#408abf;} .white h3 a:hover {color: #fbb612;}
 .white {background-color: #f7f7f7;color: #265373; padding: 30px 0px;}
 .gray {background-color: #e6e6e6;color: #265373; padding: 30px 0px 80px;}
 .whiter {background-color: #f7f7f7; color:#336f99; padding: 10px 20px; margin-top: 40px;}
@@ -186,7 +187,7 @@ footer {
 .close:hover { background: #fbb612; }
 @media only screen and (min-width: 1024px) {
   /* Create a Parallax Effect */
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-4 {
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -194,6 +195,15 @@ footer {
       background-size: cover;
       min-height: 100%;
       position: relative;
+  }
+  .bgimg-3 {
+      background-attachment: scroll;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-image: url('logo-background.jpg');
+      background-size: cover;
+      position: relative;
+      padding: 30px 0px 80px;
   }
   .top img {
     position: absolute;
@@ -241,7 +251,7 @@ footer {
     text-align: right;
     font-weight: 300;
   }
-  .white img {
+  .white img, .blue img {
     max-width: 100%;
     margin: 0 auto;
   }
@@ -283,51 +293,45 @@ footer {
     background-color:#265373;
     color: #fbb612;
   }
-  .bgimg-3 h1 {color: #fbb612;}
+  .bgimg-4 h1 {color: #fbb612;}
   .contact .third {position: relative; top: 50px;}
   .vert-rel {height: 100%; position: relative;}
   .vertical-center {display: block; width: 100%;position: absolute;top: 50%;transform: translateY(-50%);}
-  .flex-cont {
+  .flex-cont, .flex-cont2 {
   display: -webkit-flex;
+  display: flex;
   -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
   }
   .flex-cont2 {
-  display: -webkit-flex;
   -webkit-flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row-reverse;
   }
-  .flexbox-1 {
+  .flex-cont img, .flex-cont2 img{width: 100%;}
+  .flexbox-1,.flexbox-2,.flexbox-3  {
   -webkit-flex: 1;
   -ms-flex: 1;
-  flex: 1 100%;
-  border: solid 3px red;
+  flex: 1;
   padding: 20px;
   }
-  .flexbox-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1 100%;
-  border: solid 3px blue;
-  padding: 20px;
-  }
-  .flexbox-3 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1 100%;
-  border: solid 3px blue;
-  padding: 20px;
-  }
+  .flexbox-4 {  -webkit-flex: 2;-ms-flex: 2;flex: 2;padding: 20px;}
+  .column-three {align-items: flex-start;}
+  .row-img img {height: 200px; width: auto;}
+  .flex-cont .smaller-img img {max-width: 300px;}
+  .row-img {text-align: center; font-size: 20px;}
   .emb embed{
     width: 100%;
     height: 600px;
   }
+  .port-img img {display: block;max-width: 800px; width: 100%; margin: 0 auto; padding: 40px 20px;}
 }
 @media only screen and (max-width: 1024px) {
     /* Turn off parallax scrolling for tablets and phones */
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
         background-attachment: scroll;
         background-position: top;
         background-repeat: no-repeat;
@@ -338,7 +342,7 @@ footer {
         background-size: cover;
         padding-bottom: 20px;
     }
-    .bgimg-2, .bgimg-3  {
+    .bgimg-2, .bgimg-3, .bgimg-4  {
         background-image: url('logo-background.jpg');
         background-size: cover;
         padding: 30px 0px 80px;
@@ -385,9 +389,15 @@ footer {
       margin: 0 auto;
       margin-bottom: 30px;
     }
-    .contact p {text-align: center;}
+    .contact p, .column-three p {text-align: center;}
     .contact {padding-bottom: 70px;}
     #container {max-width: 90%; margin: 0 auto;}
+    .flex-cont img, .flex-cont2 img, .port-img img { display: block;width: 80%; margin: 0 auto;}
+    .port-img img {padding: 30px 0px;}
+    .row-img {display: block; width: 80%; margin: 0 auto;}
+    .emb embed {width: 100%; height: 300px;}
+    .small img {height: 200px; width: auto;}
+    .smaller-img img {height: 350px; width: auto;}
     .bgimg-2 h1 {color:#fbb612; text-align: center; font-weight: bold; font-size: 55px; margin-bottom: -20px;}
     .bgimg-2 .left, .bgimg-2 .right{
       display: block;
@@ -425,6 +435,7 @@ footer {
     }
     footer {
         margin-top: 0px;
+        font-size: 12px;
     }
 }
 /*To Keep Text/other at certain Max beyond 1920 screens*/
@@ -439,24 +450,17 @@ footer {
     text-align: right;
     font-weight: 300;
   }
-  .blue-text h3, .contact p {
+  .blue-text h3, .contact p, .white h3 {
     font-size: 22px;
   }
-  .blue-text h1 {
+  .blue-text h1, .white h1 {
     font-size: 42px;
   }
-  .flexbox-1 {
+  .flexbox-3, .flexbox-4 {
   -webkit-flex: 2;
-  border: solid 3px red;
-  padding: 20px;
-  height: 100%;
-  }
-  .flexbox-2 {
-  -webkit-flex: 1;
-  border: solid 3px blue;
   padding: 20px;
   }
-  #container {max-width: 60%; margin: 0 auto;}
+  #container {max-width: 1000px; margin: 0 auto;}
   .modalDialog p {
     font-size: 25px;
   }
